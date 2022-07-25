@@ -1,5 +1,5 @@
 def bubble_sort (array)
-    array.each_with_index do |num, index|
+    def sort_cycle(array) = array.each_with_index do |num, index|
         hold = nil
         if (num <=> array[index+1]) == 1
             hold = array[index]
@@ -7,7 +7,8 @@ def bubble_sort (array)
             array[index+1] = hold
         end
     end
-    puts array
+    array.length.times {sort_cycle(array)}
+    array
 end
 
-bubble_sort([4,3,2,8,43,13,132,12,5])
+puts bubble_sort([4,3,2,8,43,13,132,12,5])
